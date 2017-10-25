@@ -17,6 +17,7 @@
 		BC1DDE321FA06FDA002FC8D5 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC1DDE2E1FA06FCC002FC8D5 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC1DDE731FA0785D002FC8D5 /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1DDE711FA0785D002FC8D5 /* ConsentDocument.swift */; };
 		BC1DDE741FA0785D002FC8D5 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1DDE721FA0785D002FC8D5 /* ConsentTask.swift */; };
+		BC1DDE781FA07EB5002FC8D5 /* VoiceTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1DDE771FA07EB5002FC8D5 /* VoiceTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		BC1DDE271FA06FCB002FC8D5 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		BC1DDE711FA0785D002FC8D5 /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		BC1DDE721FA0785D002FC8D5 /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
+		BC1DDE771FA07EB5002FC8D5 /* VoiceTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		BC1DDE101FA06EEA002FC8D5 /* FluStudy */ = {
 			isa = PBXGroup;
 			children = (
+				BC1DDE761FA07E93002FC8D5 /* Active */,
 				BC1DDE6E1FA0783F002FC8D5 /* Consent */,
 				BC1DDE111FA06EEA002FC8D5 /* AppDelegate.swift */,
 				BC1DDE131FA06EEA002FC8D5 /* ViewController.swift */,
@@ -131,6 +134,14 @@
 				BC1DDE721FA0785D002FC8D5 /* ConsentTask.swift */,
 			);
 			name = Consent;
+			sourceTree = "<group>";
+		};
+		BC1DDE761FA07E93002FC8D5 /* Active */ = {
+			isa = PBXGroup;
+			children = (
+				BC1DDE771FA07EB5002FC8D5 /* VoiceTask.swift */,
+			);
+			name = Active;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +247,7 @@
 				BC1DDE741FA0785D002FC8D5 /* ConsentTask.swift in Sources */,
 				BC1DDE141FA06EEA002FC8D5 /* ViewController.swift in Sources */,
 				BC1DDE121FA06EEA002FC8D5 /* AppDelegate.swift in Sources */,
+				BC1DDE781FA07EB5002FC8D5 /* VoiceTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@ import ResearchKit
 class ViewController: UIViewController {
 
     var consentTaskViewController:ORKTaskViewController!
+    var voiceTaskViewController:ORKTaskViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,14 +47,14 @@ extension ViewController : ORKTaskViewControllerDelegate
                 writeResultToFile(taskViewController: consentTaskViewController, type: "consent")
                 print("done with consent form!")
                 
-//                tappingTaskViewController = ORKTaskViewController(task: TappingTask, taskRun: nil)
-//                tappingTaskViewController.outputDirectory = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0], isDirectory: true)
-//                tappingTaskViewController.delegate = self
-                //present(tappingTaskViewController, animated: true, completion: nil)
+                voiceTaskViewController = ORKTaskViewController(task: VoiceTask, taskRun: nil)
+                voiceTaskViewController.outputDirectory = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0], isDirectory: true)
+                voiceTaskViewController.delegate = self
+                present(voiceTaskViewController, animated: true, completion: nil)
             }
             else
             {
-                //writeResultToFile(taskViewController: tappingTaskViewController, type: "tapping")
+                //writeResultToFile(taskViewController: voiceTaskViewController, type:)
                 print("Done with tapping form")
             }
             
