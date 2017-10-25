@@ -15,6 +15,8 @@
 		BC1DDE1F1FA06EEA002FC8D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1DDE1D1FA06EEA002FC8D5 /* LaunchScreen.storyboard */; };
 		BC1DDE311FA06FDA002FC8D5 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1DDE2E1FA06FCC002FC8D5 /* ResearchKit.framework */; };
 		BC1DDE321FA06FDA002FC8D5 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC1DDE2E1FA06FCC002FC8D5 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC1DDE731FA0785D002FC8D5 /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1DDE711FA0785D002FC8D5 /* ConsentDocument.swift */; };
+		BC1DDE741FA0785D002FC8D5 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1DDE721FA0785D002FC8D5 /* ConsentTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		BC1DDE1E1FA06EEA002FC8D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC1DDE201FA06EEA002FC8D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC1DDE271FA06FCB002FC8D5 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
+		BC1DDE711FA0785D002FC8D5 /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
+		BC1DDE721FA0785D002FC8D5 /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		BC1DDE101FA06EEA002FC8D5 /* FluStudy */ = {
 			isa = PBXGroup;
 			children = (
+				BC1DDE6E1FA0783F002FC8D5 /* Consent */,
 				BC1DDE111FA06EEA002FC8D5 /* AppDelegate.swift */,
 				BC1DDE131FA06EEA002FC8D5 /* ViewController.swift */,
 				BC1DDE151FA06EEA002FC8D5 /* Main.storyboard */,
@@ -117,6 +122,15 @@
 				BC1DDE301FA06FCC002FC8D5 /* ResearchKitTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BC1DDE6E1FA0783F002FC8D5 /* Consent */ = {
+			isa = PBXGroup;
+			children = (
+				BC1DDE711FA0785D002FC8D5 /* ConsentDocument.swift */,
+				BC1DDE721FA0785D002FC8D5 /* ConsentTask.swift */,
+			);
+			name = Consent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +232,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC1DDE1A1FA06EEA002FC8D5 /* FluStudy.xcdatamodeld in Sources */,
+				BC1DDE731FA0785D002FC8D5 /* ConsentDocument.swift in Sources */,
+				BC1DDE741FA0785D002FC8D5 /* ConsentTask.swift in Sources */,
 				BC1DDE141FA06EEA002FC8D5 /* ViewController.swift in Sources */,
 				BC1DDE121FA06EEA002FC8D5 /* AppDelegate.swift in Sources */,
 			);
@@ -395,6 +411,7 @@
 				BC1DDE251FA06EEA002FC8D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

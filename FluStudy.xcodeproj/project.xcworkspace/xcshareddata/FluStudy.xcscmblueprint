@@ -1,20 +1,22 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "08404CC562D412B875FA6A9FD2859FB68383E997",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DA2FF164960173AA0D7133BD0E18C9C45F78E6F5",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "08404CC562D412B875FA6A9FD2859FB68383E997" : 9223372036854775807,
-    "9CF6181E3789E3853840089C16D4B9FDDB9B31E2" : 9223372036854775807
+    "9CF6181E3789E3853840089C16D4B9FDDB9B31E2" : 9223372036854775807,
+    "DA2FF164960173AA0D7133BD0E18C9C45F78E6F5" : 9223372036854775807,
+    "08404CC562D412B875FA6A9FD2859FB68383E997" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "352AA3AE-6C91-4DF7-AAA8-47E892246D1D",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "08404CC562D412B875FA6A9FD2859FB68383E997" : "Project\/",
-    "9CF6181E3789E3853840089C16D4B9FDDB9B31E2" : "Project\/ResearchKit\/"
+    "9CF6181E3789E3853840089C16D4B9FDDB9B31E2" : "ResearchKit\/",
+    "DA2FF164960173AA0D7133BD0E18C9C45F78E6F5" : "FluStudy\/",
+    "08404CC562D412B875FA6A9FD2859FB68383E997" : ""
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "FluStudy",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FluStudy\/FluStudy.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FluStudy.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:RubyOnRails-JHU-605-484\/team15-spring16.git",
@@ -25,6 +27,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ResearchKit\/ResearchKit.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9CF6181E3789E3853840089C16D4B9FDDB9B31E2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:jsik\/FluStudy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DA2FF164960173AA0D7133BD0E18C9C45F78E6F5"
     }
   ]
 }
