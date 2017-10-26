@@ -18,6 +18,7 @@
 		BC1DDE731FA0785D002FC8D5 /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1DDE711FA0785D002FC8D5 /* ConsentDocument.swift */; };
 		BC1DDE741FA0785D002FC8D5 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1DDE721FA0785D002FC8D5 /* ConsentTask.swift */; };
 		BC1DDE781FA07EB5002FC8D5 /* VoiceTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1DDE771FA07EB5002FC8D5 /* VoiceTask.swift */; };
+		BCF8744E1FA1DE8D00D072F4 /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF8744D1FA1DE8D00D072F4 /* SurveyTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		BC1DDE711FA0785D002FC8D5 /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		BC1DDE721FA0785D002FC8D5 /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
 		BC1DDE771FA07EB5002FC8D5 /* VoiceTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceTask.swift; sourceTree = "<group>"; };
+		BCF8744D1FA1DE8D00D072F4 /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				BC1DDE771FA07EB5002FC8D5 /* VoiceTask.swift */,
+				BCF8744D1FA1DE8D00D072F4 /* SurveyTask.swift */,
 			);
 			name = Active;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				BC1DDE731FA0785D002FC8D5 /* ConsentDocument.swift in Sources */,
 				BC1DDE741FA0785D002FC8D5 /* ConsentTask.swift in Sources */,
 				BC1DDE141FA06EEA002FC8D5 /* ViewController.swift in Sources */,
+				BCF8744E1FA1DE8D00D072F4 /* SurveyTask.swift in Sources */,
 				BC1DDE121FA06EEA002FC8D5 /* AppDelegate.swift in Sources */,
 				BC1DDE781FA07EB5002FC8D5 /* VoiceTask.swift in Sources */,
 			);
