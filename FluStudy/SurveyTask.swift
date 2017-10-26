@@ -51,13 +51,15 @@ public var SurveyTask: ORKOrderedTask {
     
     let seventhStep = ORKAudioStep(identifier: "seventhStep")
     seventhStep.title = "Record your cough"
-    seventhStep.text = "Please coughing for as long as you can."
+    seventhStep.text = "Please cough for as long as you can."
     seventhStep.stepDuration = 5
-    seventhStep.shouldContinueOnFinish = true;
+    seventhStep.shouldContinueOnFinish = false;
     let recordingSettings = [
-        AVFormatIDKey : UInt(kAudioFormatAppleLossless),
-        AVNumberOfChannelsKey : 2,
-        AVSampleRateKey: 44100.0
+        AVSampleRateKey : 44100.0,
+        AVFormatIDKey : kAudioFormatAppleLossless,
+        AVNumberOfChannelsKey : 1,
+        AVEncoderAudioQualityKey : AVAudioQuality.medium.rawValue,
+        AVEncoderBitRateKey : 320000
         ] as [String : Any]
     let config = ORKAudioRecorderConfiguration(identifier: "Recorder", recorderSettings: recordingSettings)
     seventhStep.recorderConfigurations?.append(config)
