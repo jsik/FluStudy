@@ -19,7 +19,8 @@ public var ConsentTask: ORKOrderedTask
     
     let signature = consentDocument.signatures!.first
     let reviewConsentStep = ORKConsentReviewStep(identifier: "ConsentReviewStep", signature: signature, in: consentDocument)
-    
+    reviewConsentStep.title = "Concent Form"
+    signature?.title = "Participator"
     reviewConsentStep.text = "Review your consent agreement!"
     reviewConsentStep.reasonForConsent = "Please consent to your participation in our study!"
     
