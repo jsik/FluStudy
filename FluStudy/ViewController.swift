@@ -50,7 +50,7 @@ extension ViewController : ORKTaskViewControllerDelegate
                 print("done with consent form!")
                 
                 surveyTaskViewController = ORKTaskViewController(task: SurveyTask, taskRun: nil)
-                //surveyTaskViewController.outputDirectory = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0], isDirectory: true)
+                surveyTaskViewController.outputDirectory = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0], isDirectory: true)
                 surveyTaskViewController.delegate = self
                 present(surveyTaskViewController, animated: true, completion: nil)
             } else if surveyTaskViewController == taskViewController
@@ -94,26 +94,22 @@ extension ViewController : ORKTaskViewControllerDelegate
                     })
                     break
                 case "survey":
-                    let document = ConsentDocument.copy() as! ORKConsentDocument
-                    document.makePDF(completionHandler: { (pdfData:Data?, error: Error?) in
-                        var path = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0], isDirectory: true)
-                        path.appendPathComponent("\(type)-data.pdf")
-                        print(path)
-                        do {
-                            try pdfData?.write(to:path)
-                        } catch let error {
-                            print(error.localizedDescription)
-                        }
-                    })
+                    let path = surveyTaskViewController.outputDirectory
+                    let fileString = "\((path?.path)!)/\(type)-data.txt"
+                    NSKeyedArchiver.archiveRootObject(taskResult as ORKTaskResult, toFile: fileString)
+                    print(fileString)
                     break
                 case "microphone":
+                    let path = voiceTaskViewController.outputDirectory
+                    let fileString = "\((path?.path)!)/\(type)-data.obj"
+                    NSKeyedArchiver.archiveRootObject(taskResult, toFile: fileString)
+                    print(fileString)
                     break
                 default:
                     break
             }
-            
+            print("file write success")
         }
-        print("file write success")
     }
     
     

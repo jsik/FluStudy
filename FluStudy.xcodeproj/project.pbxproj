@@ -102,9 +102,9 @@
 				BC1DDE131FA06EEA002FC8D5 /* ViewController.swift */,
 				BC1DDE151FA06EEA002FC8D5 /* Main.storyboard */,
 				BC1DDE1B1FA06EEA002FC8D5 /* Assets.xcassets */,
+				BC1DDE181FA06EEA002FC8D5 /* FluStudy.xcdatamodeld */,
 				BC1DDE1D1FA06EEA002FC8D5 /* LaunchScreen.storyboard */,
 				BC1DDE201FA06EEA002FC8D5 /* Info.plist */,
-				BC1DDE181FA06EEA002FC8D5 /* FluStudy.xcdatamodeld */,
 			);
 			path = FluStudy;
 			sourceTree = "<group>";
