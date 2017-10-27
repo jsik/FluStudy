@@ -13,8 +13,6 @@
 		BC1DDE1A1FA06EEA002FC8D5 /* FluStudy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC1DDE181FA06EEA002FC8D5 /* FluStudy.xcdatamodeld */; };
 		BC1DDE1C1FA06EEA002FC8D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC1DDE1B1FA06EEA002FC8D5 /* Assets.xcassets */; };
 		BC1DDE1F1FA06EEA002FC8D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1DDE1D1FA06EEA002FC8D5 /* LaunchScreen.storyboard */; };
-		BC1DDE311FA06FDA002FC8D5 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1DDE2E1FA06FCC002FC8D5 /* ResearchKit.framework */; };
-		BC1DDE321FA06FDA002FC8D5 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC1DDE2E1FA06FCC002FC8D5 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC1DDE731FA0785D002FC8D5 /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1DDE711FA0785D002FC8D5 /* ConsentDocument.swift */; };
 		BC1DDE741FA0785D002FC8D5 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1DDE721FA0785D002FC8D5 /* ConsentTask.swift */; };
 		BC1DDE781FA07EB5002FC8D5 /* VoiceTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1DDE771FA07EB5002FC8D5 /* VoiceTask.swift */; };
@@ -22,26 +20,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BC1DDE2D1FA06FCC002FC8D5 /* PBXContainerItemProxy */ = {
+		BCF874641FA2FB9B00D072F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BC1DDE271FA06FCB002FC8D5 /* ResearchKit.xcodeproj */;
+			containerPortal = BCF8745E1FA2FB9B00D072F4 /* ResearchKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B183A5951A8535D100C76870;
 			remoteInfo = ResearchKit;
 		};
-		BC1DDE2F1FA06FCC002FC8D5 /* PBXContainerItemProxy */ = {
+		BCF874661FA2FB9B00D072F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BC1DDE271FA06FCB002FC8D5 /* ResearchKit.xcodeproj */;
+			containerPortal = BCF8745E1FA2FB9B00D072F4 /* ResearchKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
 			remoteInfo = ResearchKitTests;
-		};
-		BC1DDE331FA06FDB002FC8D5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BC1DDE271FA06FCB002FC8D5 /* ResearchKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = B183A4731A8535D100C76870;
-			remoteInfo = ResearchKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -52,7 +43,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BC1DDE321FA06FDA002FC8D5 /* ResearchKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,11 +58,11 @@
 		BC1DDE1B1FA06EEA002FC8D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC1DDE1E1FA06EEA002FC8D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC1DDE201FA06EEA002FC8D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC1DDE271FA06FCB002FC8D5 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		BC1DDE711FA0785D002FC8D5 /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
 		BC1DDE721FA0785D002FC8D5 /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
 		BC1DDE771FA07EB5002FC8D5 /* VoiceTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceTask.swift; sourceTree = "<group>"; };
 		BCF8744D1FA1DE8D00D072F4 /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
+		BCF8745E1FA2FB9B00D072F4 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../../.Trash/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC1DDE311FA06FDA002FC8D5 /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +79,7 @@
 		BC1DDE051FA06EEA002FC8D5 = {
 			isa = PBXGroup;
 			children = (
-				BC1DDE271FA06FCB002FC8D5 /* ResearchKit.xcodeproj */,
+				BCF8745E1FA2FB9B00D072F4 /* ResearchKit.xcodeproj */,
 				BC1DDE101FA06EEA002FC8D5 /* FluStudy */,
 				BC1DDE0F1FA06EEA002FC8D5 /* Products */,
 			);
@@ -120,15 +109,6 @@
 			path = FluStudy;
 			sourceTree = "<group>";
 		};
-		BC1DDE281FA06FCB002FC8D5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BC1DDE2E1FA06FCC002FC8D5 /* ResearchKit.framework */,
-				BC1DDE301FA06FCC002FC8D5 /* ResearchKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		BC1DDE6E1FA0783F002FC8D5 /* Consent */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +127,15 @@
 			name = Active;
 			sourceTree = "<group>";
 		};
+		BCF8745F1FA2FB9B00D072F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCF874651FA2FB9B00D072F4 /* ResearchKit.framework */,
+				BCF874671FA2FB9B00D072F4 /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,7 +151,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				BC1DDE341FA06FDB002FC8D5 /* PBXTargetDependency */,
 			);
 			name = FluStudy;
 			productName = FluStudy;
@@ -199,8 +187,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = BC1DDE281FA06FCB002FC8D5 /* Products */;
-					ProjectRef = BC1DDE271FA06FCB002FC8D5 /* ResearchKit.xcodeproj */;
+					ProductGroup = BCF8745F1FA2FB9B00D072F4 /* Products */;
+					ProjectRef = BCF8745E1FA2FB9B00D072F4 /* ResearchKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -211,18 +199,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		BC1DDE2E1FA06FCC002FC8D5 /* ResearchKit.framework */ = {
+		BCF874651FA2FB9B00D072F4 /* ResearchKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ResearchKit.framework;
-			remoteRef = BC1DDE2D1FA06FCC002FC8D5 /* PBXContainerItemProxy */;
+			remoteRef = BCF874641FA2FB9B00D072F4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BC1DDE301FA06FCC002FC8D5 /* ResearchKitTests.xctest */ = {
+		BCF874671FA2FB9B00D072F4 /* ResearchKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ResearchKitTests.xctest;
-			remoteRef = BC1DDE2F1FA06FCC002FC8D5 /* PBXContainerItemProxy */;
+			remoteRef = BCF874661FA2FB9B00D072F4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -256,14 +244,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		BC1DDE341FA06FDB002FC8D5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ResearchKit;
-			targetProxy = BC1DDE331FA06FDB002FC8D5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BC1DDE151FA06EEA002FC8D5 /* Main.storyboard */ = {

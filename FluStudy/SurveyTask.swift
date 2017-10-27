@@ -43,27 +43,27 @@ public var SurveyTask: ORKOrderedTask {
     let sixthStep = ORKQuestionStep(identifier: "sixthStep", title: "Does anyone else have flu in your family?", answer: sixthStepFormat)
     steps += [sixthStep]
     
-    let countdownStep = ORKCountdownStep(identifier: "CountdownStep")
-    countdownStep.stepDuration = 5
-    countdownStep.title = "Get ready to record your cough"
-    countdownStep.text = "After the countdown, start coughing for as long as you can. You'll have 10 seconds."
-    steps += [countdownStep]
+//    let countdownStep = ORKCountdownStep(identifier: "CountdownStep")
+//    countdownStep.stepDuration = 5
+//    countdownStep.title = "Get ready to record your cough"
+//    countdownStep.text = "After the countdown, start coughing for as long as you can. You'll have 10 seconds."
+//    steps += [countdownStep]
     
-    let seventhStep = ORKAudioStep(identifier: "seventhStep")
-    seventhStep.title = "Record your cough"
-    seventhStep.text = "Please cough for as long as you can."
-    seventhStep.stepDuration = 5
-    seventhStep.shouldContinueOnFinish = false;
-    let recordingSettings = [
-        AVSampleRateKey : 44100.0,
-        AVFormatIDKey : kAudioFormatAppleLossless,
-        AVNumberOfChannelsKey : 1,
-        AVEncoderAudioQualityKey : AVAudioQuality.medium.rawValue,
-        AVEncoderBitRateKey : 320000
-        ] as [String : Any]
-    let config = ORKAudioRecorderConfiguration(identifier: "Recorder", recorderSettings: recordingSettings)
-    seventhStep.recorderConfigurations?.append(config)
-    steps += [seventhStep]
+//    let seventhStep = ORKAudioStep(identifier: "seventhStep")
+//    seventhStep.title = "Record your cough"
+//    seventhStep.text = "Please cough for as long as you can."
+//    seventhStep.stepDuration = 5
+//    seventhStep.shouldContinueOnFinish = false;
+//    let recordingSettings = [
+//        AVSampleRateKey : 44100.0,
+//        AVFormatIDKey : kAudioFormatAppleLossless,
+//        AVNumberOfChannelsKey : 1,
+//        AVEncoderAudioQualityKey : AVAudioQuality.medium.rawValue,
+//        AVEncoderBitRateKey : 320000
+//        ] as [String : Any]
+//    let config = ORKAudioRecorderConfiguration(identifier: "Recorder", recorderSettings: recordingSettings)
+//    seventhStep.recorderConfigurations?.append(config)
+//    steps += [seventhStep]
     
     let summaryStep = ORKCompletionStep(identifier: "SummaryStep")
     summaryStep.title = "Completed"
