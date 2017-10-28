@@ -8,30 +8,57 @@
 
 import UIKit
 import ResearchKit
+import AVKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     var consentTaskViewController:ORKTaskViewController!
     var surveyTaskViewController:ORKTaskViewController!
     var voiceTaskViewController:ORKTaskViewController!
+    @IBOutlet weak var firstVideo: UIImageView?
+    @IBOutlet weak var secondVideo: UIImageView?
+    @IBOutlet weak var thirdVideo: UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let url1 = URL(string: "https://www.cdc.gov/flu/video/flushots_30sec.mp4")
+        if let thumbnailImage1 = getThumbnailFrom(path: url1!) {
+            firstVideo?.image = thumbnailImage1
+        }
+        let url2 = URL(string: "https://www.cdc.gov/flu/video/inever_60sec.mp4")
+        if let thumbnailImage2 = getThumbnailFrom(path: url2!) {
+            secondVideo?.image = thumbnailImage2
+        }
+        let url3 = URL(string: "https://www.cdc.gov/flu/video/who-needs-flu-vaccine-15_320px.mp4")
+        if let thumbnailImage3 = getThumbnailFrom(path: url3!) {
+            thirdVideo?.image = thumbnailImage3
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     @IBAction func startResearchBtnPressed(_ sender: Any) {
         consentTaskViewController = ORKTaskViewController(task: ConsentTask, taskRun: nil)
-        //consentTaskViewController.outputDirectory = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0], isDirectory: true)
         consentTaskViewController.delegate = self
         present(consentTaskViewController, animated: true, completion: nil)
     }
-
-
+    
+    func getThumbnailFrom(path: URL) -> UIImage? {
+        do {
+            let asset = AVURLAsset(url: path , options: nil)
+            let imgGenerator = AVAssetImageGenerator(asset: asset)
+            imgGenerator.appliesPreferredTrackTransform = true
+            let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(10, 1), actualTime: nil)
+            let thumbnail = UIImage(cgImage: cgImage)
+            print(thumbnail)
+            return thumbnail
+        } catch let error {
+            print("*** Error generating thumbnail: \(error.localizedDescription)")
+            return nil
+        }
+    }
 }
 
 extension ViewController : ORKTaskViewControllerDelegate
