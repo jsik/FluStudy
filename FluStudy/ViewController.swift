@@ -156,10 +156,58 @@ extension ViewController : ORKTaskViewControllerDelegate
                     })
                     break
                 case "survey":
-                    let path = surveyTaskViewController.outputDirectory
-                    let fileString = "\((path?.path)!)/\(type)-data.txt"
-                    NSKeyedArchiver.archiveRootObject(taskResult as ORKTaskResult, toFile: fileString)
-                    print(fileString)
+                    var output: [String] = [];
+                    for question in SurveyTask.steps {
+                        if let q = question as? ORKQuestionStep {
+                            output.append(q.title!)
+                        }
+                    }
+                    var index : Int = 0;
+                    if let results = taskResult.results {
+                        for result in results.enumerated() {
+                            if let r = result.element as? ORKStepResult {
+                                if r.identifier != "IntroStep" && (r.results?.count)! > 0{
+                                    if let scaleResult = r.results?[0] as? ORKScaleQuestionResult {
+                                        if scaleResult.answer != nil {
+                                            output[index] += String(describing: scaleResult.answer!)
+                                        } else {
+                                            output[index] += "[No Answer]"
+                                        }
+                                    } else if let numberResult = r.results?[0] as? ORKNumericQuestionResult {
+                                        if numberResult.answer != nil {
+                                            output[index] += String(describing: numberResult.answer!)
+                                        } else {
+                                            output[index] += "[No Answer]"
+                                        }
+                                    } else if let boolResult = r.results?[0] as? ORKBooleanQuestionResult {
+                                        if boolResult.answer != nil {
+                                            var boolWord : String = "No"
+                                            if let answer = boolResult.answer as? Bool {
+                                                if answer {
+                                                    boolWord = "Yes"
+                                                }
+                                            }
+                                            output[index] += boolWord
+                                        } else {
+                                            output[index] += "[No Answer]"
+                                        }
+                                    }
+                                    index += 1
+                                }
+                            }
+                        }
+                    }
+                    if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+                        let fileURL = dir.appendingPathComponent("survey_output.txt")
+                        let text = output.joined(separator: "\n")
+                        do {
+                            try text.write(to: fileURL, atomically: false, encoding: .utf8)
+                        }
+                        catch let error {
+                            print(error.localizedDescription)
+                        }
+                        print(dir)
+                    }
                     break
                 case "microphone":
                     let path = voiceTaskViewController.outputDirectory
