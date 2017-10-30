@@ -11,7 +11,7 @@ import ResearchKit
 import AVKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVPlayerViewControllerDelegate {
 
     var consentTaskViewController:ORKTaskViewController!
     var surveyTaskViewController:ORKTaskViewController!
@@ -19,23 +19,39 @@ class ViewController: UIViewController {
     @IBOutlet weak var firstVideo: UIImageView?
     @IBOutlet weak var secondVideo: UIImageView?
     @IBOutlet weak var thirdVideo: UIImageView?
-    
+    var urls = [
+        "https://www.cdc.gov/flu/video/flushots_30sec.mp4",
+        "https://www.cdc.gov/flu/video/inever_60sec.mp4",
+        "https://www.cdc.gov/flu/video/who-needs-flu-vaccine-15_320px.mp4"
+    ]
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url1 = URL(string: "https://www.cdc.gov/flu/video/flushots_30sec.mp4")
+        let url1 = URL(string: urls[0])
         if let thumbnailImage1 = getThumbnailFrom(path: url1!) {
             firstVideo?.image = thumbnailImage1
+            firstVideo?.layoutIfNeeded()
         }
-        let url2 = URL(string: "https://www.cdc.gov/flu/video/inever_60sec.mp4")
+        let url2 = URL(string: urls[1])
         if let thumbnailImage2 = getThumbnailFrom(path: url2!) {
             secondVideo?.image = thumbnailImage2
+            secondVideo?.layoutIfNeeded()
         }
-        let url3 = URL(string: "https://www.cdc.gov/flu/video/who-needs-flu-vaccine-15_320px.mp4")
+        let url3 = URL(string: urls[2])
         if let thumbnailImage3 = getThumbnailFrom(path: url3!) {
             thirdVideo?.image = thumbnailImage3
+            thirdVideo?.layoutIfNeeded()
         }
     }
 
+    @IBAction func firstVideoBtnPressed(_ sender: Any) {
+        self.playVideo(url: urls[0])
+    }
+    @IBAction func secondVideoBtnPressed(_ sender: Any) {
+        self.playVideo(url: urls[1])
+    }
+    @IBAction func thirdVideoBtnPressed(_ sender: Any) {
+        self.playVideo(url: urls[2])
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -59,6 +75,25 @@ class ViewController: UIViewController {
             return nil
         }
     }
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscapeLeft
+    }
+    func playVideo(url: String) {
+        let videoURL = URL(string: url)
+        let player = AVPlayer(url: videoURL!)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.present(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
+    }
+
+    func playerViewController(_ playerViewController: AVPlayerViewController, restoreUserInterfaceForPictureInPictureStopWithCompletionHandler completionHandler: @escaping (Bool) -> Void) {
+            present(playerViewController, animated: true)
+            {
+                completionHandler(false)
+            }
+        }
 }
 
 extension ViewController : ORKTaskViewControllerDelegate
